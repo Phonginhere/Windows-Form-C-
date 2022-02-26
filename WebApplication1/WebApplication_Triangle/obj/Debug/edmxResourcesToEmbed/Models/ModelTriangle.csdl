@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QL_TamGiacModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="triangle_math">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="tri_edge1" />
+      <PropertyRef Name="tri_edge2" />
+      <PropertyRef Name="tri_edge3" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tri_edge1" Type="Int32" Nullable="false" />
+    <Property Name="tri_edge2" Type="Int32" Nullable="false" />
+    <Property Name="tri_edge3" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="QL_TamGiacEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="triangle_math" EntityType="Self.triangle_math" />
+  </EntityContainer>
+</Schema>

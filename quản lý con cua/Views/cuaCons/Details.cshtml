@@ -1,0 +1,42 @@
+﻿@model quản_lý_con_cua.Models.cuaCon
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>cuaCon</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.cuaMe.CuaMeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cuaMe.CuaMeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cuaConSoLuong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cuaConSoLuong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cuaConMoTa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cuaConMoTa)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.cuaConId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

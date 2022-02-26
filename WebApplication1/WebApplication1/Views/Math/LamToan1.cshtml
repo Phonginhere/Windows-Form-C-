@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "LamToan1";
+    var mykey2 = ViewData["c"];
+    var YourRadioButton = Request.Form["YourRadioButton"];
+    var cau = ViewData["cau"];
+    var err = ViewData["err"];
+
+}
+
+
+<h2>LamToan1</h2>
+
+@using (Html.BeginForm("LamToan1", "Math", FormMethod.Post))
+            {
+    <form name="f1" method=get>
+
+        <input type="radio" name="YourRadioButton" value="plus">cộng<br />
+        <input type="radio" name="YourRadioButton" value="minus">trừ<br />
+        <input type="radio" name="YourRadioButton" value="mult">nhân<br />
+        <input type="radio" name="YourRadioButton" value="divi">chia<br />
+        <input type="text" name="soA" value=""/>
+        <input type="text" name="soB" value="" />
+        <input type="submit" value="summit" />
+
+    </form>
+}
+
+
+@*<div>
+        Male @Html.RadioButton("Gender", "male")
+        Female @Html.RadioButton("Gender", "female")
+    </div>*@
+
+
+
+<p>@mykey2</p>
+<p>@cau</p>
+<p>@err</p>
+

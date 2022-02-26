@@ -1,0 +1,65 @@
+﻿@model WebApplication_Product_No_Auth.Models.Product
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm("Create", "Products", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Product</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.productName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.productName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.productName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.productLinkImg, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.productLinkImg, new { htmlAttributes = new { @class = "form-control", @type = "file" } })
+                @Html.ValidationMessageFor(model => model.productLinkImg, "", new { @class = "text-danger" })
+                <p style="color:red">@ViewBag.Error_img</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.productComment, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.productComment, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.productComment, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ProductPrice, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ProductPrice, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ProductPrice, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

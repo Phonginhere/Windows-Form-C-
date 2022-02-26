@@ -1,0 +1,43 @@
+﻿@model IEnumerable<WebApplication1.Models.DanhMucss>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Tạo danh mục</h2>
+
+<p>
+    @Html.ActionLink("Create New Danh Mục", "CreateDanhMuc")
+</p>
+<p>
+    @Html.ActionLink("Create New Sản Phẩm", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DanhMucsID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DanhMucName)
+        </th>
+        <th>Cài Đặt</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DanhMucsID)
+        </td>
+        <td>
+            
+            @Html.DisplayFor(modelItem => item.DanhMucName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.DanhMucsID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DanhMucsID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DanhMucsID })
+        </td>
+    </tr>
+}
+
+</table>

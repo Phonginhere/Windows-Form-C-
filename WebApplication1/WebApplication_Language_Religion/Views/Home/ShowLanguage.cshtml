@@ -1,0 +1,19 @@
+﻿@using WebApplication_Language_Religion.Controllers
+@{
+    ViewBag.Title = "ShowLanguage";
+}
+
+<h2>ShowLanguage</h2>
+
+
+@{
+    var myList = ViewBag.MyList;
+}
+
+@{
+    for (var i = 0; i < myList.Count; i++)
+    {
+        <p>@myList[i]</p>
+    }
+}
+

@@ -1,0 +1,65 @@
+﻿@model IEnumerable<WindowsStore_Version4.Models.Project>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@using (Html.BeginForm("Index", "Projects", FormMethod.Get))
+{
+    <p>đang thực hiện @Html.RadioButton("status", "đang thực hiện")</p>
+    <p>đã hoàn thành @Html.RadioButton("status", "đã hoàn thành")</p>
+    @Html.DropDownList("namecategory", (IEnumerable<SelectListItem>) ViewBag.catename, "« ‹ Select › »")
+    @Html.TextBox("projectText");
+    <input type="submit" name="submit" value="submit" />
+}
+@if(Model.Count() == 0)
+{
+    <script type="text/javascript">
+        alert("Không có dữ liệu")
+    </script>
+}
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ProjectName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProjectStart)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProjectEnd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProjectDescription)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProjectName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProjectStart)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProjectEnd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProjectDescription)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ProjectId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ProjectId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ProjectId })
+        </td>
+    </tr>
+}
+
+</table>

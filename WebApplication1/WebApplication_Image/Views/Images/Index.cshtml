@@ -1,0 +1,63 @@
+﻿@model IEnumerable<WebApplication_Image.Models.Image>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@*<script type="text/javascript">
+    alert(ViewBag.Fail);
+</script>*@
+@section scripts{
+    <script>
+        $(function () {
+            $('AlertBox').delay(5000).slideUp(500);
+        });
+    </script>
+    }
+@if(TempData["AlertSuccesful"] != null)
+{
+    <h2 id="AlertBox" class="alert-success">TempData["AlertSuccesful"]</h2>
+}
+@*@if (TempData["AlertSuccesful"] != null)
+{
+    <h2 id="AlertBox" class="alert-danger">TempData["AlertFail"]</h2>
+}*@
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ImageName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImageDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImagePath)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImageName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImageDesc)
+        </td>
+        <td>
+            <img src="@Url.Content(item.ImagePath)" alt="Image" height="150" width="150" />;
+            @*@Html.DisplayFor(modelItem => item.ImagePath)*@
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ImageId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ImageId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ImageId })
+        </td>
+    </tr>
+}
+
+</table>

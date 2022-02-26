@@ -1,0 +1,77 @@
+﻿@model IEnumerable<WindowsStore_Version4.Models.AssignTask>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@using (Html.BeginForm("Index", "AssignTasks", FormMethod.Get))
+{
+    @Html.TextBox("name");
+    @Html.DropDownList("ddcpy", (IEnumerable<SelectListItem>)ViewBag.comname, "Select");
+    @Html.DropDownList("ddclt", (IEnumerable<SelectListItem>)ViewBag.depname, "Select");
+    @Html.DropDownList("namecate", (IEnumerable<SelectListItem>)ViewBag.catename, "Select");
+    <input type="submit" name="submit" value="submit" />
+}
+@if(Model.Count() == 0)
+{
+    <script type="text/javascript">
+        alert("Không có dữ liệu")
+    </script>
+}
+<div class="container-fluid py-4">
+    <h4 class="text-center text-uppercase">Employee List</h4>
+    <table class="table table-striped table-bordered">
+        <thead class="bg-dark text-white">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Client.ClientName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Employee.EmployeeName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Project.ProjectName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Task)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Note)
+                </th>
+                <th></th>
+            </tr>
+        </thead>  
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Client.ClientName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Employee.EmployeeName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Project.ProjectName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Task)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Note)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.AssignTaskId }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.AssignTaskId }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.AssignTaskId })
+                    </td>
+                </tr>
+            }
+        </tbody>  
+</table>
+</div>  

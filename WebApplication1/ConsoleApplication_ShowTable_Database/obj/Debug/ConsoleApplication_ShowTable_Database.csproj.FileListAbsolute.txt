@@ -1,0 +1,6 @@
+C:\Users\Phong_learning\OneDrive\Documents\Visual Studio 2015\Projects\WebApplication1\ConsoleApplication_ShowTable_Database\bin\Debug\ConsoleApplication_ShowTable_Database.exe.config
+C:\Users\Phong_learning\OneDrive\Documents\Visual Studio 2015\Projects\WebApplication1\ConsoleApplication_ShowTable_Database\bin\Debug\ConsoleApplication_ShowTable_Database.exe
+C:\Users\Phong_learning\OneDrive\Documents\Visual Studio 2015\Projects\WebApplication1\ConsoleApplication_ShowTable_Database\bin\Debug\ConsoleApplication_ShowTable_Database.pdb
+C:\Users\Phong_learning\OneDrive\Documents\Visual Studio 2015\Projects\WebApplication1\ConsoleApplication_ShowTable_Database\obj\Debug\ConsoleApplication_ShowTable_Database.csprojResolveAssemblyReference.cache
+C:\Users\Phong_learning\OneDrive\Documents\Visual Studio 2015\Projects\WebApplication1\ConsoleApplication_ShowTable_Database\obj\Debug\ConsoleApplication_ShowTable_Database.exe
+C:\Users\Phong_learning\OneDrive\Documents\Visual Studio 2015\Projects\WebApplication1\ConsoleApplication_ShowTable_Database\obj\Debug\ConsoleApplication_ShowTable_Database.pdb

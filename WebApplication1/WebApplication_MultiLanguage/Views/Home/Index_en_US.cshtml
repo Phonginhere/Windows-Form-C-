@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Index_en_US";
+}
+
+<h2>Index_en_US</h2>
+@using (Html.BeginForm("Index_en_US", "Home", FormMethod.Get))
+{
+ <select name="mylanguage">
+    <option value="vi">vi</option>
+    <option value="en">en</option>
+</select>
+    <input type="submit" name="submit" value="submit" />
+}
+
+<br />
+@ViewBag.selectLanguage
+<br />
+@ViewBag.UserAgent
+<br />
+Ngôn ngữ tiếng anh ["Index_en_US"] Khu vực USA:
+<br />Message : @WebApplication_MultiLanguage.Resource.Resource_Language_en_US.Msg
+
+<br />Name : @WebApplication_MultiLanguage.Resource.Resource_Language_en_US.Name

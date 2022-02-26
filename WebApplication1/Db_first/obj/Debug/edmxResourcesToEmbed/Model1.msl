@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ClassesModelStoreContainer" CdmEntityContainer="ClassesEntities">
+    <EntitySetMapping Name="tblClasses">
+      <EntityTypeMapping TypeName="ClassesModel.tblClass">
+        <MappingFragment StoreEntitySet="tblClasses">
+          <ScalarProperty Name="MaLop" ColumnName="MaLop" />
+          <ScalarProperty Name="TenLop" ColumnName="TenLop" />
+          <ScalarProperty Name="SiSo" ColumnName="SiSo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblStudents">
+      <EntityTypeMapping TypeName="ClassesModel.tblStudent">
+        <MappingFragment StoreEntitySet="tblStudent">
+          <ScalarProperty Name="MaSv" ColumnName="MaSv" />
+          <ScalarProperty Name="TenSV" ColumnName="TenSV" />
+          <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+          <ScalarProperty Name="NSinh" ColumnName="NSinh" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="MaLop" ColumnName="MaLop" />
+          <ScalarProperty Name="UserNm" ColumnName="UserNm" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

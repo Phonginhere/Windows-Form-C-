@@ -1,0 +1,26 @@
+﻿@model WebApplication7.Models.SubjectMa
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SubjectMa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SubjectMaName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubjectMaName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SubjectMaId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

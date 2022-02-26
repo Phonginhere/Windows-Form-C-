@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Db_AccModelStoreContainer" CdmEntityContainer="Db_AccEntities">
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="Db_AccModel.Account">
+        <MappingFragment StoreEntitySet="Account">
+          <ScalarProperty Name="AccId" ColumnName="AccId" />
+          <ScalarProperty Name="AccName" ColumnName="AccName" />
+          <ScalarProperty Name="AccEmail" ColumnName="AccEmail" />
+          <ScalarProperty Name="AccNo" ColumnName="AccNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

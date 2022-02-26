@@ -1,0 +1,5 @@
+C:\Users\Phong_learning\OneDrive\Documents\Visual Studio 2015\Projects\WebApplication1\ConsoleApplication_WCF_Student_List_Prc_1\bin\Debug\ConsoleApplication_WCF_Student_List_Prc_1.exe.config
+C:\Users\Phong_learning\OneDrive\Documents\Visual Studio 2015\Projects\WebApplication1\ConsoleApplication_WCF_Student_List_Prc_1\bin\Debug\ConsoleApplication_WCF_Student_List_Prc_1.exe
+C:\Users\Phong_learning\OneDrive\Documents\Visual Studio 2015\Projects\WebApplication1\ConsoleApplication_WCF_Student_List_Prc_1\bin\Debug\ConsoleApplication_WCF_Student_List_Prc_1.pdb
+C:\Users\Phong_learning\OneDrive\Documents\Visual Studio 2015\Projects\WebApplication1\ConsoleApplication_WCF_Student_List_Prc_1\obj\Debug\ConsoleApplication_WCF_Student_List_Prc_1.exe
+C:\Users\Phong_learning\OneDrive\Documents\Visual Studio 2015\Projects\WebApplication1\ConsoleApplication_WCF_Student_List_Prc_1\obj\Debug\ConsoleApplication_WCF_Student_List_Prc_1.pdb

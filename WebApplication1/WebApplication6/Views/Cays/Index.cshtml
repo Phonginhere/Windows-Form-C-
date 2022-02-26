@@ -1,0 +1,49 @@
+﻿@model IEnumerable<WebApplication6.Models.Cay>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New Cay", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LoaiCays.LoaiCayTen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CayTen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CayMoTa)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoaiCays.LoaiCayTen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CayTen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CayMoTa)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CayId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CayId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CayId })
+        </td>
+    </tr>
+}
+
+</table>
+
+<script>
+
+</script>

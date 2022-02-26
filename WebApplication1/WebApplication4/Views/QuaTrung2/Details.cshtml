@@ -1,0 +1,42 @@
+﻿@model WebApplication4.Models.QuaTrung2
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>QuaTrung2</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ConGa.ConGa2Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConGa.ConGa2Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuaTrung2Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuaTrung2Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuaTrung2Desc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuaTrung2Desc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.QuaTrung2Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

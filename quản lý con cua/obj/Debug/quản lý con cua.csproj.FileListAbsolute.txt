@@ -1,0 +1,83 @@
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\quản lý con cua.dll.config
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\quản lý con cua.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\quản lý con cua.pdb
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\csc.exe
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\csc.exe.config
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\csc.rsp
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\csi.exe
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\csi.exe.config
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\csi.rsp
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\Microsoft.Managed.Core.targets
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\Microsoft.Win32.Primitives.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\System.AppContext.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\System.Collections.Immutable.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\System.Console.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\System.Globalization.Calendars.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\System.IO.Compression.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\System.IO.Compression.ZipFile.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\System.IO.FileSystem.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\System.Net.Http.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\System.Net.Sockets.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\System.Reflection.Metadata.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\System.Security.Cryptography.Encoding.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\System.Security.Cryptography.Primitives.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\System.Text.Encoding.CodePages.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\System.Threading.Tasks.Extensions.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\System.ValueTuple.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\System.Xml.ReaderWriter.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\System.Xml.XmlDocument.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\System.Xml.XPath.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\System.Xml.XPath.XDocument.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\vbc.exe
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\vbc.exe.config
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\vbc.rsp
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\VBCSCompiler.exe
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\roslyn\VBCSCompiler.exe.config
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\Antlr3.Runtime.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\EntityFramework.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\EntityFramework.SqlServer.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\Microsoft.Web.Infrastructure.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\Newtonsoft.Json.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\System.Web.Helpers.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\System.Web.Mvc.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\System.Web.Optimization.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\System.Web.Razor.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\System.Web.WebPages.Deployment.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\System.Web.WebPages.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\System.Web.WebPages.Razor.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\WebGrease.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\EntityFramework.xml
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\EntityFramework.SqlServer.xml
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\System.Web.Helpers.xml
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\System.Web.Mvc.xml
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\System.Web.Optimization.xml
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\System.Web.Razor.xml
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\System.Web.WebPages.xml
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\System.Web.WebPages.Deployment.xml
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\System.Web.WebPages.Razor.xml
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\Newtonsoft.Json.xml
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\Antlr3.Runtime.pdb
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\obj\Debug\quản lý con cua.csprojAssemblyReference.cache
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\obj\Debug\quản lý con cua.csproj.CoreCompileInputs.cache
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\obj\Debug\quản lý con cua.csproj.CopyComplete
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\obj\Debug\quản lý con cua.dll
+F:\bài tập c#\bài tập mvc\quản lý con cua\quản lý con cua\obj\Debug\quản lý con cua.pdb

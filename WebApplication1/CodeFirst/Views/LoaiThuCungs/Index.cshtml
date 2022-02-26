@@ -1,0 +1,39 @@
+﻿@model IEnumerable<CodeFirst.Models.LoaiThuCung>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LoaiThuCungName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LoaiThuCungMota)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoaiThuCungName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoaiThuCungMota)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.LoaiThuCungId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.LoaiThuCungId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.LoaiThuCungId })
+        </td>
+    </tr>
+}
+
+</table>

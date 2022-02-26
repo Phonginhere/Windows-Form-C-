@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Triangle";
+}
+
+<h2>Triangle</h2>
+
+@using (Html.BeginForm("Triangle", "Home", FormMethod.Get))
+{
+    <input type="text" name="edge1" id="edge1"  placeholder="edge1"/>
+    <input type="text" name="edge2" id="edge2"  placeholder="edge2"/>
+    <input type="text" name="edge3" id="edge3"  placeholder="edge3"/>
+    <input type="text" name="status" id="status" placeholder="status" />
+    <input type="submit" name="submit" id="submit" value="submit" />
+   
+}
+
+<button onclick="check()" value="check">Check</button>
+@ViewBag.Sta
+<script>
+    document.getElementById("submit").style.display = "none";
+    function check() {
+        let edge1 = Number(document.getElementById("edge1").value);
+        let edge2 = Number(document.getElementById("edge2").value);
+        let edge3 = Number(document.getElementById("edge3").value);
+        let suc;
+        if (edge1 + edge2 > edge3 || edge2 + edge3 > edge1 || edge1 + edge3 > edge2) {
+            suc = "Đúng tam giác";
+            alert(suc);
+            document.getElementById("submit").style.display = "block";
+            let double_edge1 = edge1 * edge1;
+            let double_edge2 = edge2 * edge2;
+            let double_edge3 = edge3 * edge3;
+            if ((double_edge1 + double_edge2 == double_edge3) || (double_edge2 + double_edge3 == double_edge1) || (double_edge1 + double_edge3 == double_edge2)) {
+                document.getElementById("status").value = "tam giac vuong";
+            } else if (edge1 == edge2 || edge2 == edge3 || edge1 == edge3) {
+                document.getElementById("status").value = "tam giac can";
+            } else if (edge1 == edge2 == edge3) {
+                document.getElementById("status").value = "tam giac deu";
+            }
+        }
+     }
+</script>
+
+

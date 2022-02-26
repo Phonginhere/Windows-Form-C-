@@ -1,0 +1,93 @@
+﻿@model IEnumerable<Windows_Store.Models.Exam>
+@{
+    ViewBag.Title = "Index";
+}
+
+@section scripts{
+    <script>
+        $(function () {
+            $('#AlertBox').removeClass('hide');
+            $('#AlertBox').delay(5000).slideUp(500);
+        });
+    </script>
+}
+
+@if (TempData["AlertMessage"] != null)
+{
+    <h2 id="AlertBox" class="alert-success hide" role="alert">
+        @TempData["AlertMessage"]
+    </h2>
+}
+
+
+@*@foreach (var student in Model.Student)
+    {
+        <option value="@exam.StudentId">@exam.Student.StudentName</option>
+    }*@
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@using (Html.BeginForm("Index", "Exams", FormMethod.Get))
+{
+    //student
+    <select id="ddlStudent" name="searchStudent">
+        <option value="0">Chọn Học Sinh</option>
+        @foreach (var item in Model.GroupBy(m => m.Student.StudentName).Select(g => g.First()))
+        {
+            <option id="@Html.DisplayFor(m => item.Student.StudentName)" value="@Html.DisplayFor(model => item.Student.StudentName)"> @Html.DisplayFor(model => item.Student.StudentName)</option>
+        }
+    </select>
+
+    //subject
+    <select id="ddlStudent" name="searchSubject">
+        <option value="0">Chọn Môn Học</option>
+        @foreach (var item in Model.GroupBy(m => m.Subject.SubjectName).Select(g => g.First()))
+        {
+            <option id="@Html.DisplayFor(m => item.Subject.SubjectName)" value="@Html.DisplayFor(model => item.Subject.SubjectName)"> @Html.DisplayFor(model => item.Subject.SubjectName)</option>
+        }
+    </select>
+    <input type="submit" name="submit" value="Search"/>
+}
+
+
+
+<input type="radio" id="pass" name="score_student" value=""/> Đỗ (Mark >=40)
+<input type="radio" id="fail" name="score_student" value="" /> (Mark < 40)
+<input type="radio" id="pass_fail" name="score_student" value="" /> Cả đỗ & trượt
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Student.StudentName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Subject.SubjectName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mark)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Student.StudentName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Subject.SubjectName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mark)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ExamId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ExamId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ExamId })
+        </td>
+    </tr>
+}
+
+</table>

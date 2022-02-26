@@ -1,0 +1,144 @@
+﻿<link href="~/Content/xoi.css" rel="stylesheet" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+@{
+    Layout = "~/Views/Shared/_MyLayOut.cshtml";
+    ViewBag.Title = "SendEmail2";
+}
+@model SendMail.Models.EmailModel
+
+<script>
+    $(document).ready(function () {
+        $("#haha").click(function () {
+            alert("Hello!");
+            $("#myDiv").hide();
+        });
+    });
+    function getTest() {
+        var b = $("#hihi").val();
+        alert("get email is: " + b);
+    }
+
+    function showDiv() {
+        $("#myDiv").show();
+    }
+    function fadein() {
+        $("#myDiv").fadeIn(3000);
+    }
+    function fadeout() {
+        $("#myDiv").fadeOut(3000);
+    }
+    function theTest1() {
+        alert("hello this is a test 1");
+    }
+    function theTest2() {
+        alert("this is a test 2!");
+        var b = document.getElementById("hihi").value;
+        document.getElementById("to").innerHTML = b;
+        alert("get dữ liệu thuần: " + b);
+    }
+</script>
+
+<h2 class="foot" id="movetxt">Contact</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4 class="foot" id="movetxt">Yêu cầu nhập thông tin bên dưới</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.From, htmlAttributes: new { @class = "control-label col-md-2", id = "from" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.From, new { @class = "form-control", id = "hihi" })
+                @Html.ValidationMessageFor(model => model.From, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2"})
+            <div class="col-md-10">
+                @Html.PasswordFor(model => model.Password, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div style="margin-left: 250px;">
+            <p class="ChuXanh">@ViewBag.Succesful</p>
+            <p class="ChuDo" id="quaylen">@ViewBag.Error</p>
+
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.To, htmlAttributes: new { @class = "control-label col-md-2", id = "to" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.To, new { @class = "form-control",id = "toi" })
+                @Html.ValidationMessageFor(model => model.To, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Subject, htmlAttributes: new { @class = "control-label col-md-2", id = "subject" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Subject, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Subject, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Body, htmlAttributes: new { @class = "control-label col-md-2", id = "body" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Body, new { id = "body", @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Body, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div id="myDiv" style="width:80px;height:80px;display:none; background-color:red;">
+            NỘi dụng div
+        </div> 
+        <br /><br />
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Send" id="haha" class="btn btn-default" />
+            </div>
+            <div class="col-md-offset-2 col-md-10" style="margin-left: 150px; margin-top:-48px">
+                <input type="reset" value="Reset" onclick="getTest()" class="btn btn-default" />
+            </div>
+            <div class="col-md-offset-2 col-md-10" style="margin-left: 300px; margin-top:-48px">
+                <input type="button" value="button1" onclick="theTest1()" class="btn btn-default" />
+            </div>
+            <div class="col-md-offset-2 col-md-10" style="margin-left: 450px; margin-top:-48px">
+                <input type="button" value="button2" onclick="theTest2()" class="btn btn-default" />
+            </div>
+
+            @*fadeDiv*@
+
+            <div class="col-md-offset-2 col-md-10" style="margin-left: 600px; margin-top:-48px">
+                <input type="button" value="showDiv" onclick="showDiv()" class="btn btn-default" />
+            </div>
+
+            <div class="col-md-offset-2 col-md-10" style="margin-left: 750px; margin-top:-48px">
+                <input type="button" value="FadeDivIn" onclick="fadein()" class="btn btn-default" />
+            </div>
+
+            <div class="col-md-offset-2 col-md-10" style="margin-left: 900px; margin-top:-48px">
+                <input type="button" value="FadeDivOut" onclick="fadeout()" class="btn btn-default" />
+            </div>
+
+        </div>
+    </div>
+}
+
+
+
+@*<div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>*@
+
+@*@section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }*@

@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<script>
+    function getData() {
+        var myurl = "http://localhost:63031/MHocSinh/getStudent";
+        myurl = "/MHocSinh/getStudent";
+        $.getJSON(myurl, function (jd) {
+            alert('b :' + jd.name +", "+ jd.age);
+            $('#stage').html('<p><br/> Name : '+jd.name+'</p>');
+            $('#stage').append('<p>Age : ' + jd.age + '</p><br/>');
+        });
+    }
+</script>
+
+<h2>Index</h2>
+<div>
+    <h3>this is a Tranh Page</h3>
+</div>
+<br />
+<div id="stage" style="background-color:aquamarine">
+    <br />
+    Get data in here.
+    <br /><br />
+</div>
+<br />
+<button id="btnAct3" onclick="getData()">Get Data</button><br /><br />

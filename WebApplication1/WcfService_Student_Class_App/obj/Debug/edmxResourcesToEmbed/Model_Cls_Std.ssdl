@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Db_Cls_StdModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="class">
+    <Key>
+      <PropertyRef Name="classId" />
+    </Key>
+    <Property Name="classId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="className" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="student">
+    <Key>
+      <PropertyRef Name="studentId" />
+    </Key>
+    <Property Name="studentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="studentName" Type="nvarchar" MaxLength="70" Nullable="false" />
+    <Property Name="classId" Type="int" Nullable="false" />
+    <Property Name="studentEmail" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__student__classId__25869641">
+    <End Role="class" Type="Self.class" Multiplicity="1" />
+    <End Role="student" Type="Self.student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="class">
+        <PropertyRef Name="classId" />
+      </Principal>
+      <Dependent Role="student">
+        <PropertyRef Name="classId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Db_Cls_StdModelStoreContainer">
+    <EntitySet Name="class" EntityType="Self.class" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="student" EntityType="Self.student" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__student__classId__25869641" Association="Self.FK__student__classId__25869641">
+      <End Role="class" EntitySet="class" />
+      <End Role="student" EntitySet="student" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,37 @@
+﻿<link href="~/Content/xoi.css" rel="stylesheet" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+@{
+    Layout = "~/Views/Shared/_LayOut.cshtml";
+    ViewBag.Title = "getStudent";
+}
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script>
+
+    $(document).ready(function () {
+        //Call EmpDetails jsonResult Method
+        $.getJSON("Home/EmpDetails",
+        function (json) {
+        var tr;
+        //Append each row to html table
+        for (var i = 0; i < json.length; i++) {
+                tr = $('<tr/>');
+                tr.append("<td>" + json[i].Id + "</td>");
+                tr.append("<td>" + json[i].Name + "</td>");
+                tr.append("<td>" + json[i].City + "</td>");
+                tr.append("<td>" + json[i].Address + "</td>");
+                $('table').append(tr);
+            }
+        });
+    });
+</script>
+<table class="table table-bordered table-condensed table-hover table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>City</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>  

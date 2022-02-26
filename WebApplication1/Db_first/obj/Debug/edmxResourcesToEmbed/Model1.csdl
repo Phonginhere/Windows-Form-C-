@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ClassesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tblClass">
+    <Key>
+      <PropertyRef Name="MaLop" />
+    </Key>
+    <Property Name="MaLop" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenLop" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="SiSo" Type="Int32" />
+    <NavigationProperty Name="tblStudents" Relationship="Self.FK__tblStuden__MaLop__267ABA7A" FromRole="tblClasses" ToRole="tblStudent" />
+  </EntityType>
+  <EntityType Name="tblStudent">
+    <Key>
+      <PropertyRef Name="MaSv" />
+    </Key>
+    <Property Name="MaSv" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenSV" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="GioiTinh" Type="Boolean" />
+    <Property Name="NSinh" Type="DateTime" Precision="3" />
+    <Property Name="DiaChi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MaLop" Type="Int32" />
+    <Property Name="UserNm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblClass" Relationship="Self.FK__tblStuden__MaLop__267ABA7A" FromRole="tblStudent" ToRole="tblClasses" />
+  </EntityType>
+  <Association Name="FK__tblStuden__MaLop__267ABA7A">
+    <End Role="tblClasses" Type="Self.tblClass" Multiplicity="0..1" />
+    <End Role="tblStudent" Type="Self.tblStudent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblClasses">
+        <PropertyRef Name="MaLop" />
+      </Principal>
+      <Dependent Role="tblStudent">
+        <PropertyRef Name="MaLop" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ClassesEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblClasses" EntityType="Self.tblClass" />
+    <EntitySet Name="tblStudents" EntityType="Self.tblStudent" />
+    <AssociationSet Name="FK__tblStuden__MaLop__267ABA7A" Association="Self.FK__tblStuden__MaLop__267ABA7A">
+      <End Role="tblClasses" EntitySet="tblClasses" />
+      <End Role="tblStudent" EntitySet="tblStudents" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

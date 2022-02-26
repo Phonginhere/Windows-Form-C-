@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Db_Student_ClassModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="classes">
+          <Key>
+            <PropertyRef Name="classId" />
+          </Key>
+          <Property Name="classId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="className" Type="varchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="student">
+          <Key>
+            <PropertyRef Name="studentId" />
+          </Key>
+          <Property Name="studentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="studentName" Type="nvarchar" MaxLength="70" Nullable="false" />
+          <Property Name="studentEmail" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="classId" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__student__classId__25869641">
+          <End Role="classes" Type="Self.classes" Multiplicity="1" />
+          <End Role="student" Type="Self.student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="classes">
+              <PropertyRef Name="classId" />
+            </Principal>
+            <Dependent Role="student">
+              <PropertyRef Name="classId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Db_Student_ClassModelStoreContainer">
+          <EntitySet Name="classes" EntityType="Self.classes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="student" EntityType="Self.student" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__student__classId__25869641" Association="Self.FK__student__classId__25869641">
+            <End Role="classes" EntitySet="classes" />
+            <End Role="student" EntitySet="student" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Db_Student_ClassModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="class">
+          <Key>
+            <PropertyRef Name="classId" />
+          </Key>
+          <Property Name="classId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="className" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="students" Relationship="Self.FK__student__classId__25869641" FromRole="classes" ToRole="student" />
+        </EntityType>
+        <EntityType Name="student">
+          <Key>
+            <PropertyRef Name="studentId" />
+          </Key>
+          <Property Name="studentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="studentName" Type="String" MaxLength="70" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="studentEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="classId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="class" Relationship="Self.FK__student__classId__25869641" FromRole="student" ToRole="classes" />
+        </EntityType>
+        <Association Name="FK__student__classId__25869641">
+          <End Role="classes" Type="Self.class" Multiplicity="1" />
+          <End Role="student" Type="Self.student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="classes">
+              <PropertyRef Name="classId" />
+            </Principal>
+            <Dependent Role="student">
+              <PropertyRef Name="classId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Db_Student_ClassEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="classes" EntityType="Self.class" />
+          <EntitySet Name="students" EntityType="Self.student" />
+          <AssociationSet Name="FK__student__classId__25869641" Association="Self.FK__student__classId__25869641">
+            <End Role="classes" EntitySet="classes" />
+            <End Role="student" EntitySet="students" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Db_Student_ClassModelStoreContainer" CdmEntityContainer="Db_Student_ClassEntities1">
+          <EntitySetMapping Name="classes">
+            <EntityTypeMapping TypeName="Db_Student_ClassModel.class">
+              <MappingFragment StoreEntitySet="classes">
+                <ScalarProperty Name="classId" ColumnName="classId" />
+                <ScalarProperty Name="className" ColumnName="className" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="students">
+            <EntityTypeMapping TypeName="Db_Student_ClassModel.student">
+              <MappingFragment StoreEntitySet="student">
+                <ScalarProperty Name="studentId" ColumnName="studentId" />
+                <ScalarProperty Name="studentName" ColumnName="studentName" />
+                <ScalarProperty Name="studentEmail" ColumnName="studentEmail" />
+                <ScalarProperty Name="classId" ColumnName="classId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,6 @@
+C:\Users\Phong_learning\OneDrive\Documents\Visual Studio 2015\Projects\WebApplication1\Console_WCF_Student\obj\Debug\Console_WCF_Student.csprojResolveAssemblyReference.cache
+C:\Users\Phong_learning\OneDrive\Documents\Visual Studio 2015\Projects\WebApplication1\Console_WCF_Student\bin\Debug\Console_WCF_Student.exe.config
+C:\Users\Phong_learning\OneDrive\Documents\Visual Studio 2015\Projects\WebApplication1\Console_WCF_Student\bin\Debug\Console_WCF_Student.exe
+C:\Users\Phong_learning\OneDrive\Documents\Visual Studio 2015\Projects\WebApplication1\Console_WCF_Student\bin\Debug\Console_WCF_Student.pdb
+C:\Users\Phong_learning\OneDrive\Documents\Visual Studio 2015\Projects\WebApplication1\Console_WCF_Student\obj\Debug\Console_WCF_Student.exe
+C:\Users\Phong_learning\OneDrive\Documents\Visual Studio 2015\Projects\WebApplication1\Console_WCF_Student\obj\Debug\Console_WCF_Student.pdb

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QL_Language_ReligionModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Religion_Language">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="QL_Language_ReligionEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Religion_Language" EntityType="Self.Religion_Language" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,10 @@
+C:\Users\Phong_learning\OneDrive\Documents\Visual Studio 2015\Projects\WindowsFormsApplicationTest\WindowsFormsApplicationTest\bin\Debug\WindowsFormsApplicationTest.exe.config
+C:\Users\Phong_learning\OneDrive\Documents\Visual Studio 2015\Projects\WindowsFormsApplicationTest\WindowsFormsApplicationTest\bin\Debug\WindowsFormsApplicationTest.exe
+C:\Users\Phong_learning\OneDrive\Documents\Visual Studio 2015\Projects\WindowsFormsApplicationTest\WindowsFormsApplicationTest\bin\Debug\WindowsFormsApplicationTest.pdb
+C:\Users\Phong_learning\OneDrive\Documents\Visual Studio 2015\Projects\WindowsFormsApplicationTest\WindowsFormsApplicationTest\obj\Debug\WindowsFormsApplicationTest.csprojResolveAssemblyReference.cache
+C:\Users\Phong_learning\OneDrive\Documents\Visual Studio 2015\Projects\WindowsFormsApplicationTest\WindowsFormsApplicationTest\obj\Debug\WindowsFormsApplicationTest.Properties.Resources.resources
+C:\Users\Phong_learning\OneDrive\Documents\Visual Studio 2015\Projects\WindowsFormsApplicationTest\WindowsFormsApplicationTest\obj\Debug\WindowsFormsApplicationTest.csproj.GenerateResource.Cache
+C:\Users\Phong_learning\OneDrive\Documents\Visual Studio 2015\Projects\WindowsFormsApplicationTest\WindowsFormsApplicationTest\obj\Debug\WindowsFormsApplicationTest.exe
+C:\Users\Phong_learning\OneDrive\Documents\Visual Studio 2015\Projects\WindowsFormsApplicationTest\WindowsFormsApplicationTest\obj\Debug\WindowsFormsApplicationTest.pdb
+C:\Users\Phong_learning\OneDrive\Documents\Visual Studio 2015\Projects\WindowsFormsApplicationTest\WindowsFormsApplicationTest\obj\Debug\WindowsFormsApplicationTest.FormLogin.resources
+C:\Users\Phong_learning\OneDrive\Documents\Visual Studio 2015\Projects\WindowsFormsApplicationTest\WindowsFormsApplicationTest\obj\Debug\WindowsFormsApplicationTest.FormMain.resources

@@ -1,0 +1,26 @@
+﻿@model WebApplication2.Models.DanhMuc2
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DanhMuc2</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DanhMuc2Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DanhMuc2Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DanhMuc2ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

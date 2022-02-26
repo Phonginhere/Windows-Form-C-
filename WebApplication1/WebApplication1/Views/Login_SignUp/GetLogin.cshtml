@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "GetLogin";
+}
+
+<html>
+<body>
+    <form method="get">
+        <fieldset>
+            <legend>Đăng Nhập</legend>
+            <label for="us" >UserName</label>
+            <input type="text" id="un" name="usna"/> <br /> <br />
+            <label for="pd">Password</label>
+            <input type="password" id="pw" name="pass" /> <br /> <br />
+            <button onclick="myFunction()">Đăng Nhập</button>
+        </fieldset>
+        <script>
+            function myFunction() {
+                var u = document.getElementById("un").value;
+                var p = document.getElementById("pw").value;
+
+                alert("UserName: " + u + " Password: " + p);
+            }
+        </script>
+    </form>
+</body>
+</html>
+
+
+<h2>GetLogin</h2>
+

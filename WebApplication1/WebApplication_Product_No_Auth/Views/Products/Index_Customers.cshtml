@@ -1,0 +1,40 @@
+﻿@model IEnumerable<WebApplication_Product_No_Auth.Models.Product>
+
+@{
+    ViewBag.Title = "Index_Customers";
+}
+
+<h2>Index_Customers</h2>
+
+<div class="container-fluid">
+    <div class="row">
+
+        @foreach (var item in Model)
+        {
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"> <!--xs: phone, sm: tablets, md: laptop, lg=desktop & laptop.  Mục đích là để kéo rộng thẻ div-->
+                <div class="img-thumbnail">
+                    <div style="height: 40px;width: 250px; background-color: rgb(251, 255, 241);"><p style="text-align: center;">@item.productName</p></div>
+                    <img src="@Url.Content(@item.productLinkImg)" width="250" height="150" />
+                    <div style="height: 60px;width: 250px; background-color: rgb(251, 255, 241);">
+                        <table style="border-collapse:separate; ">
+                            <tr>
+                                <th>Giá tiền:</th>
+                                <th>@item.ProductPrice Đ</th>
+                                @*<th>Giá tiền:</th>
+                                <th>3</th>*@
+                            </tr>
+                            <tr>
+                                <th>Số lượng đơn hàng:</th>
+                                <th>3</th>
+                            </tr>
+                            <tr>
+                                <th><a href="#addcart">Add to cart</a></th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div> <!-- End row -->
+</div><!-- End container -->

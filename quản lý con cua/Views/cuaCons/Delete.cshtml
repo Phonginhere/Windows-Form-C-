@@ -1,0 +1,48 @@
+﻿@model quản_lý_con_cua.Models.cuaCon
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>cuaCon</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.cuaMe.CuaMeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cuaMe.CuaMeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cuaConSoLuong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cuaConSoLuong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cuaConMoTa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cuaConMoTa)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

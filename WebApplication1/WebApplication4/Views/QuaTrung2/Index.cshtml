@@ -1,0 +1,45 @@
+﻿@model IEnumerable<WebApplication4.Models.QuaTrung2>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ConGa.ConGa2Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QuaTrung2Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QuaTrung2Desc)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ConGa.ConGa2Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QuaTrung2Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QuaTrung2Desc)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.QuaTrung2Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.QuaTrung2Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.QuaTrung2Id })
+        </td>
+    </tr>
+}
+
+</table>

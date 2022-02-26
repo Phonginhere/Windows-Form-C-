@@ -1,0 +1,16 @@
+﻿@*@model UploadFile.Models.Model_ImgDocx*@
+@{
+    ViewBag.Title = "UploadFile";
+}
+
+<h2>UploadFile</h2>
+@using(Html.BeginForm("UploadFile", "Upload", FormMethod.Post, new {enctype = "multipart/form-data" }))
+{
+    <div>
+        @Html.TextBoxFor(model => model.ImgUpload, null, new { type = "file", @class = "input-file" })
+       @* @Html.TextBox("file", "", new {type = "file" }) <br />*@
+        <input type="submit" value="Upload" />
+        @ViewBag.Message
+    </div>
+}
+

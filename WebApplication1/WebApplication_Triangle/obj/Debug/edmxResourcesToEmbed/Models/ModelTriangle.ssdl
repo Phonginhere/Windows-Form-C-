@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QL_TamGiacModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QL_TamGiac.dbo.triangle_math' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="triangle_math">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="tri_edge1" />
+      <PropertyRef Name="tri_edge2" />
+      <PropertyRef Name="tri_edge3" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tri_edge1" Type="int" Nullable="false" />
+    <Property Name="tri_edge2" Type="int" Nullable="false" />
+    <Property Name="tri_edge3" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="QL_TamGiacModel1StoreContainer">
+    <EntitySet Name="triangle_math" EntityType="Self.triangle_math" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [triangle_math].[Id] AS [Id], 
+    [triangle_math].[tri_edge1] AS [tri_edge1], 
+    [triangle_math].[tri_edge2] AS [tri_edge2], 
+    [triangle_math].[tri_edge3] AS [tri_edge3]
+    FROM [dbo].[triangle_math] AS [triangle_math]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

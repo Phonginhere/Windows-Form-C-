@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "SqlHome";
+}
+
+<h2>SqlHome</h2>
+
+@model List<Student>
+
+<h1>Student</h1>
+
+<table>
+    <tr>
+        <th>First Name</th>
+        <th>Email</th>
+        <th>Password</th>
+    </tr>
+    @foreach (var student in Model)
+    {
+        <tr>
+            <td>@student.studentName</td>
+            <td>@student.studentEmail</td>
+            <td>@student.studentPass</td>
+        </tr>
+    }
+</table>
+
+

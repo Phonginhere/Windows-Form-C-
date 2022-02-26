@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Kết quả Upload File";
+}
+
+<h2>Hình Ảnh</h2>
+
+<div>
+    <img src="~/UploadFiles/@ViewBag.Message" width="150" height="150"/>
+    @*<img src="~/UploadFiles/@ViewBag.Message2" />*@
+</div>
+
+<h2>Tài Liệu</h2>
+<ul>Tên File: @ViewBag.Message2</ul>
+<ul>Loại File: @ViewBag.typeDocxFile</ul>
+<ul>Kích thước file: @ViewBag.CountStorageDocx</ul>
+@*<ul>@Html.Action("DownloadFile")</ul>*@
+@*<td>@Html.Action("GetImageAndPath", "Upload")</td>
+<a href="~/Upload/DownloadFile?filePath=@ViewBag.FileImg"><img src="~/Images/download.png" style="width: 15px; height: 15px" title="Download" /></a> 
+<ul>Tải File: </ul>*@
+
+
+
+

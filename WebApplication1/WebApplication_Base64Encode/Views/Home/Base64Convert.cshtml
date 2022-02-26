@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Base64Convert";
+}
+
+<h2>Base64Convert</h2>
+
+@using (Html.BeginForm("Base64Convert", "Home", FormMethod.Post))
+{
+    <input type="text" name="encode" value="" id="encode" required placeholder="input name" />
+    <input type="submit" name="submit" value="submit" />
+}
+
+@ViewBag.encoder
+

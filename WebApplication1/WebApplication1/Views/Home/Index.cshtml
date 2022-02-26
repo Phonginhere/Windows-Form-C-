@@ -1,0 +1,22 @@
+﻿
+
+@{
+    ViewBag.Title = "Index";
+}
+@model WebApplication1.Models.Customer
+<h2>Index</h2>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Page Title</title>  
+</head>
+<body>
+    <h2>@ViewBag.Header</h2> 
+    <label>ID: @Model.CustomerID</label><br />
+    <label>Tên: @Model.CustomerName</label><br />
+    <label>Địa Chỉ: @Model.CustomerAddress</label><br />
+</body>
+</html>
+

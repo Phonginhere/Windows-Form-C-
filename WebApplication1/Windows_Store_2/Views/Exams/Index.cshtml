@@ -1,0 +1,89 @@
+﻿@*@model PagedList.IPagedList<Windows_Store_2.Models.Exam>
+@using PagedList.Mvc*@
+@model PagedList.IPagedList<Windows_Store_2.Models.Exam>
+ @using PagedList.Mvc
+
+@*@model IEnumerable<Windows_Store_2.Models.Exam>*@
+
+@{
+    ViewBag.Title = "Index";
+}
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#AlertBox").delay(5000).slideUp();
+
+    });
+</script>
+
+
+@if (ViewBag.Success != null)
+    {
+        <h2 id="AlertBox" class="alert-success" role="alert">Thành Công</h2>
+    }
+
+<h2>Index</h2>
+
+<p>Search</p>
+<br />
+@using (Html.BeginForm("Index", "Exams", FormMethod.Get))
+{
+    @Html.DropDownList("studentName", (IEnumerable<SelectListItem>)ViewBag.sn); 
+    @Html.DropDownList("subjectName", (IEnumerable<SelectListItem>)ViewBag.sns); 
+    <p>Sinh Viên Đỗ @Html.RadioButton("compare", "pass")</p>
+    <p>Sinh Viên Trượt @Html.RadioButton("compare", "fail")</p>
+    <p>Sinh Viên Trượt và Đỗ @Html.RadioButton("compare", "pass_fail")</p>
+
+
+     <input type="submit" name="submit" value="submit" />
+
+}
+@ViewBag.suc
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Student.StudentName)*@
+            Student Name
+        </th>
+        <th>
+           Subject Name
+        </th>
+        <th>
+            Mark
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Student.StudentName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Subject.SubjectName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mark)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ExamId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ExamId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ExamId })
+        </td>
+    </tr>
+}
+
+</table>
+<br />
+@*Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+@Html.PagedListPager(Model, Page_No => Url.Action("Index", new { Page_No }))*@
+
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+@Html.PagedListPager(Model, Page_No=>Url.Action("Index", new { Page_No}))

@@ -1,0 +1,72 @@
+﻿
+@{
+    ViewBag.Title = "GiaiPTBac2_KetQua";
+}
+
+<h2>GiaiPTBac2_KetQua</h2>
+
+@{ 
+    //var ketQua = ViewData["ketqua"];
+
+    var nghiem_1 = ViewData["x1"];
+    var nghiem_2 = ViewData["x2"];
+
+
+    //var nghiem_kep = ViewData["x"];
+
+    var vo_nghiem = ViewData["vn"];
+}
+@*
+else if (!(nghiem_1.ToString() == "" && nghiem_2.ToString() == ""))
+{
+    <p>Nghiệm có được là nghiệm 1: @nghiem_1 | nghiệm 2: @nghiem_2</p>
+}else if(!(nghiem_kep.ToString() == ""))
+{
+    <p>nghiệm kép là: @nghiem_kep</p>
+}
+else if (!(vo_nghiem.ToString() == ""))
+{
+    <p>nghiệm kép là: @vo_nghiem</p>
+}*@
+
+   @* <p>Nghiệm có được là nghiệm 1: @nghiem_1 | nghiệm 2: @nghiem_2</p>*@
+
+
+<p>@vo_nghiem</p><br /><br />
+<p>có nghiệm x1: @nghiem_1, x2: @nghiem_2</p><br /><br />
+
+
+@*<p>Nghiệm kép: @nghiem_kep</p><br /><br />
+
+<p>nghiệm khuyết a: @ketQua</p><br /><br />*@
+
+
+
+@*<p>@vo_nghiem</p>*@
+
+@*@if (vo_nghiem.ToString() != "")
+{
+    <p>@vo_nghiem</p>
+}
+else
+{
+    <p>có nghiệm x1: @nghiem_1, x2: @nghiem_2</p><br /><br />
+}*@
+
+@*@if (!(vo_nghiem.ToString() == ""))
+{
+<p>@vo_nghiem</p>
+}
+
+@if (!(nghiem_kep.ToString() == ""))
+{
+    <p>nghiệm kép là: @nghiem_kep</p>
+}*@
+
+@*@if (!(ketQua_KoCo_a.ToString() == ""))
+{
+<p>Nghiệm khuyết a có được là @ketQua_KoCo_a</p>
+}*@
+
+
+

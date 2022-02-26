@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="MyApiDemo/myapi" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Phong_learning\\OneDrive\\Documents\\Visual\ Studio\ 2015\\Projects\\WebApplication1\\WebApplication_API\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\Phong_learning\\OneDrive\\Documents\\Visual\ Studio\ 2015\\Projects\\WebApplication1\\WebApplication_API\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+</parameters>

@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "DisplayData";
+    
+}
+
+@{
+    var myKey0 = (string)ViewData["mykey00"];
+    var mykey1 = ViewBag.Message;
+    var mykey2 = ViewBag.MKKK;
+
+    var myList = (List<String>)ViewBag.MyList;
+}
+
+
+
+
+
+
+
+@{
+    foreach (var i in myList)
+    {
+        <p>câu thơ lẻ @i</p>
+    }
+}
+
+<p>
+    @mykey1
+    @mykey2
+</p>
+
+@Html.Partial("View_Footer");
+

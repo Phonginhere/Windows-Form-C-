@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "GetSignUp";
+}
+<html>
+<body>
+    <form method="get">
+       
+        <p>Form dang ky</p>
+        <table>
+            <tr>
+                <th><p>UserName: </p></th>
+                <th><input type="text" id="uname" name="un" /></th>
+            </tr>
+            <tr>
+                <th><p>Password: </p></th>
+                <th><input type="password" id="pass" name="ps" /></th>
+            </tr>
+            <tr>
+                <th><p>Ho Ten: </p></th>
+                <th><input type="text" id="fname" name="fn" /></th>
+            </tr>
+            <tr>
+                <th><p>Email: </p></th>
+                <th><input type="text" id="email" name="el" /></th>
+            </tr>
+        </table>
+        <button onclick="myFunction()">Try it</button>
+
+        <script>
+            function myFunction() {
+                var m = document.getElementById("uname").value;
+                var n = document.getElementById("pass").value;
+                var o = document.getElementById("fname").value;
+                var p = document.getElementById("email").value;
+
+                alert("UserName " + m + " pass: " + n + " full name: " + o + " email: " + p);
+                //alert("haha");
+
+            }
+        </script>
+    </form>
+</body>
+</html>
+@{
+    @ViewBag.tk
+}
+<h2>GetSignUp</h2>
+

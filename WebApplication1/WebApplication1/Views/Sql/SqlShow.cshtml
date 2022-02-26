@@ -1,0 +1,40 @@
+﻿@using WebApplication1.Models;
+@{
+    ViewBag.Title = "SqlShow";
+    Layout = null;
+}
+
+<h1>Student</h1>
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <style>table, th, td {
+  border: 1px solid black;
+}</style>
+    <table cellpadding="5" cellspacing="3">
+        <tr>
+            <th>Student ID</th>
+            <th>First Name</th>
+            <th>Email</th>
+            <th>Password</th>
+        </tr>
+        @foreach (Students students in (List<Students>)ViewBag.Students)
+        {
+            <tr>
+                <td>@students.studentId</td>
+                <td>@students.studentName</td>
+                <td>@students.studentEmail</td>
+                <td>@students.studentPass</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QL_TamGiacModelStoreContainer" CdmEntityContainer="QL_TamGiacEntities">
+    <EntitySetMapping Name="triangle_math">
+      <EntityTypeMapping TypeName="QL_TamGiacModel.triangle_math">
+        <MappingFragment StoreEntitySet="triangle_math">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="tri_edge1" ColumnName="tri_edge1" />
+          <ScalarProperty Name="tri_edge2" ColumnName="tri_edge2" />
+          <ScalarProperty Name="tri_edge3" ColumnName="tri_edge3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

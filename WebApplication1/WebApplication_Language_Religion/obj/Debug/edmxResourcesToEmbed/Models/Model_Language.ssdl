@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QL_Language_ReligionModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QL_Language_Religion.dbo.Religion_Language' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Religion_Language">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="150" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="QL_Language_ReligionModelStoreContainer">
+    <EntitySet Name="Religion_Language" EntityType="Self.Religion_Language" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[Religion_Language].[Id] AS [Id], 
+[Religion_Language].[name] AS [name]
+FROM [dbo].[Religion_Language] AS [Religion_Language]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

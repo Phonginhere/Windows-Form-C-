@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfService_WCF_Student_Class_Practice_1" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfService_WCF_Student_Class_Practice_1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfclass">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="class" nillable="true" type="tns:class" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfclass" nillable="true" type="tns:ArrayOfclass" />
+  <xs:complexType name="class">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="classId" type="xs:int" />
+      <xs:element minOccurs="0" name="className" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="students" nillable="true" type="tns:ArrayOfstudent" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="class" nillable="true" type="tns:class" />
+  <xs:complexType name="ArrayOfstudent">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="student" nillable="true" type="tns:student" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfstudent" nillable="true" type="tns:ArrayOfstudent" />
+  <xs:complexType name="student">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="class" nillable="true" type="tns:class" />
+      <xs:element minOccurs="0" name="classId" type="xs:int" />
+      <xs:element minOccurs="0" name="studentEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="studentId" type="xs:int" />
+      <xs:element minOccurs="0" name="studentName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="student" nillable="true" type="tns:student" />
+</xs:schema>

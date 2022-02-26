@@ -1,0 +1,42 @@
+﻿@model WebApplication7.Models.StudentChoose
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>StudentChoose</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Student.StudentName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Student.StudentName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SubjectMa.SubjectMaName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubjectMa.SubjectMaName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Diem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Diem)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.StudentChooseId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

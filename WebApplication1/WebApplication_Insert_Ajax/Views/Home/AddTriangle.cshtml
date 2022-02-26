@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewBag.Title = "AddTriangle";
+}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script>
+       
+        $(document).ready(function () {
+            $("#btnSubmit").hide();
+
+            $("#btnCheck").click(function () {
+               
+                let e1 = $("#txtEdge1").val();
+                let e2 = $("#txtEdge2").val();
+                let e3 = $("#txtEdge3").val();
+                if (e1 <= 0 || e2 <= 0 || e3 <= 0) {
+                    alert("Day khong phai la tam giac")
+                    $("#btnSubmit").hide();
+                    $('#txtStatus').val(" ");
+                } else {
+                    if (e1 + e2 > e3 || e2 + e3 > e1 || e1 + e3 > e2) {
+                        let e12 = e1 * e1;
+                        let e22 = e2 * e2;
+                        let e32 = e3 * e3;
+
+                        if (e12 + e22 == e32 || e12 + e32 == e22 || e32 + e22 == e12) {
+                            //$("#txtStatus").val() = "tam giac vuong";
+                            $('#txtStatus').val("tam giac vuong");
+                            $("#btnSubmit").show();
+                        } else if (e1 == e2 && e2 == e3 && e1 == e3) {
+                            $('#txtStatus').val("tam giac deu");
+                            $("#btnSubmit").show();
+                        } else if (e1 == e2 || e2 == e3 || e3 == e1) {
+                            $('#txtStatus').val("tam giac can");
+                            $("#btnSubmit").show();
+                        } else {
+                            $('#txtStatus').val("tam giac");
+                            $("#btnSubmit").show();
+                        }
+
+                    } else {
+                        $('#txtStatus').val(" ");
+                        alert("Day khong phai la tam giac");
+                        $("#btnSubmit").hide();
+                    }
+                }
+              
+                 
+                
+            });
+
+            $("#btnSubmit").click(function () {
+                $.ajax(
+                    {
+                        type: "Post",
+                        url: "/Home/AddTriangle",
+                        data: {
+                            Edge1: $("#txtEdge1").val(),
+                            Edge2: $("#txtEdge2").val(),
+                            Edge3: $("#txtEdge3").val(),
+                            Tri_Status: $("#txtStatus").val()
+                        }
+                    });
+                $('#txtEdge1').val("");
+                $('#txtEdge2').val("");
+                $('#txtEdge3').val("");
+                $('#txtStatus').val("");
+                $("#btnSubmit").hide();
+            });
+        });
+    </script>
+
+
+    <h2>AddTriangle</h2>
+
+    <fieldset>
+        Edge1: <input type="text" id="txtEdge1" />  <br />
+        Edge2: <input type="text" id="txtEdge2" />  <br />
+        Edge3: <input type="text" id="txtEdge3" />  <br />
+        Tri_Status: <input type="text" id="txtStatus" />  <br />
+        <input type="button" id="btnCheck" value="Check"/>
+        <input type="button" id="btnSubmit" value="Submit"/>
+        
+    </fieldset> 
+
+
+
+
+

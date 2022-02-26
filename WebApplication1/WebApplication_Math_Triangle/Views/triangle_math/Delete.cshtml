@@ -1,0 +1,48 @@
+﻿@model WebApplication_Math_Triangle.Models.triangle_math
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>triangle_math</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tri_edge1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tri_edge1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tri_edge2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tri_edge2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tri_edge3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tri_edge3)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

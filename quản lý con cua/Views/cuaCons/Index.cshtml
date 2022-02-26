@@ -1,0 +1,45 @@
+﻿@model IEnumerable<quản_lý_con_cua.Models.cuaCon>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.cuaMe.CuaMeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cuaConSoLuong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cuaConMoTa)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.cuaMe.CuaMeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cuaConSoLuong)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cuaConMoTa)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.cuaConId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.cuaConId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.cuaConId })
+        </td>
+    </tr>
+}
+
+</table>
